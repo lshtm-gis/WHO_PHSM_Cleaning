@@ -15,7 +15,7 @@
 import os
 import sys
 sys.path.insert(0, os.path.abspath('..'))
-
+#sys.path.insert(0, os.path.abspath('/usr/local/lib/python3.8/site-packages/'))
 
 # -- Project information -----------------------------------------------------
 
@@ -179,4 +179,4 @@ epub_exclude_files = ['search.html']
 
 
 # -- Extension configuration -------------------------------------------------
-autodoc_mock_imports = ['pandas', 'processing', 'countrycode']
+autodoc_mock_imports = ['pandas', 'processing', 'countrycode', 'progressbar', 'src.process']
