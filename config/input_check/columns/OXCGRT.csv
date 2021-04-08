@@ -68,3 +68,6 @@ OXCGRT,ContainmentHealthIndex
 OXCGRT,ContainmentHealthIndexForDisplay
 OXCGRT,EconomicSupportIndex
 OXCGRT,EconomicSupportIndexForDisplay
+OXCGRT,H8_Flag
+OXCGRT,H8_Protection of elderly people
+OXCGRT,H8_Notes

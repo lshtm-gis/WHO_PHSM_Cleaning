@@ -9,7 +9,10 @@ EURO,"Level of enforcement
  0 - n/a
  1 - recommended
 2 - required",enforcement
-EURO,Change in measure,
+EURO,"Change in measure 
+1 - first put in place; 
+2 - strengthened or intensified; 
+3 - eased or gradually lifted",measure_stage
 EURO,Start of measure,date_start
 EURO,End of measure,date_end
 EURO,"Source

@@ -32,7 +32,7 @@ print("Reading previous update...")
 logging.info("Reading previous update...")
 
 # Read previous update data
-previous_update = pd.read_csv("data/merge/update_merge_2021_03_10.csv",
+previous_update = pd.read_csv("data/merge/update_merge_2021_04_07.csv",
                               parse_dates=['date_start'],
                               low_memory=False,
                               encoding='latin1')
@@ -73,12 +73,18 @@ assert (len(update_not_ox.index) + len(update_ox.index)) == len(update.index)
 update_ox['date_start'] = pd.to_datetime(update_ox['date_start'],
                                          format="%Y-%m-%d %H:%M:%S")
 
-# Identify new records in OXCGRT data
+
+# Identify new records in OXCGRT data 
 new_records_ox = get_new_records(
     update_ox,
     previous_update_ox,
     combo_cols,
 )
+
+
+previous_update_ox.to_csv('tmp/previous_update_ox.csv')
+new_records_ox.to_csv('tmp/new_records_ox.csv')
+update_ox.to_csv('tmp/update_ox.csv')
 
 # Identify new prop_id values for non-OXCGRT datasets
 new_ids = set(update_not_ox['prop_id']).difference(set(previous_update_not_ox['prop_id']))

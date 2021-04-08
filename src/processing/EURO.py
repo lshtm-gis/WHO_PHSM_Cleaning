@@ -44,6 +44,7 @@ def transform(record: dict, key_ref: dict, country_ref: pd.DataFrame, who_coding
     # 3. Make manual country name changes
     record = utils.replace_conditional(record, 'country_territory_area', 'Kosovo*', 'Kosovo')
     record = utils.replace_conditional(record, 'country_territory_area', 'Bewlgium', 'Belgium')
+    record = utils.replace_conditional(record, 'country_territory_area', 'Luxemburg', 'Luxembourg')
 
     # Replace enforcement values
     record = utils.replace_conditional(record, 'enforcement', ' ', 'not known')
@@ -54,14 +55,19 @@ def transform(record: dict, key_ref: dict, country_ref: pd.DataFrame, who_coding
     record = utils.replace_conditional(record, 'enforcement', '2', 'required')
     record = utils.replace_conditional(record, 'enforcement', 2, 'required')
     record = utils.replace_conditional(record, 'enforcement', 3, 'monitored')
+    record = utils.replace_conditional(record, 'enforcement', '3', 'monitored')
+    record = utils.replace_conditional(record, 'enforcement', '', 'not known')
 
     # Replace measure_stage values
     record = utils.replace_conditional(record, 'measure_stage', 1, 'new')
     record = utils.replace_conditional(record, 'measure_stage', '1', 'new')
     record = utils.replace_conditional(record, 'measure_stage', 2, 'modification')
     record = utils.replace_conditional(record, 'measure_stage', '2', 'modification')
-    record = utils.replace_conditional(record, 'measure_stage', 3, 'phase out')
-    record = utils.replace_conditional(record, 'measure_stage', '3', 'phase out')
+    record = utils.replace_conditional(record, 'measure_stage', 3, 'phase-out')
+    record = utils.replace_conditional(record, 'measure_stage', '3', 'phase-out')
+    record = utils.replace_conditional(record, 'measure_stage', ' ', '')
+    record = utils.replace_conditional(record, 'measure_stage', 0, '')
+    record = utils.replace_conditional(record, 'measure_stage', '0', '')
 
     # Change a who_code value based on measure_stage
     record = update_school_record(record)

@@ -6,6 +6,8 @@ EURO,Category
 EURO,Subcategory
 EURO,Measure
 EURO,Restriction description/further details
+EURO,Rationale
+EURO,Rationale description
 EURO,"Level of enforcement
  0 - n/a
  1 - recommended
@@ -27,15 +29,13 @@ EURO,Entry Week No. (2020)
 EURO,Entry Week No. (2021)
 EURO,Comments
 EURO,Confidential
-EURO,% of each source
-EURO,1
-EURO,0.6525821596244131
-EURO,2
-EURO,0.24696039484771878
-EURO,3
-EURO,0.0896232093415192
-EURO,4
-EURO,0.010834236186348862
+,Unnamed: 20
+,Unnamed: 21
+,Unnamed: 22
+,Unnamed: 23
+,Unnamed: 24
+,Unnamed: 25
+,Unnamed: 26
 ,Unnamed: 27
 ,Unnamed: 28
 ,Unnamed: 29
@@ -70,3 +70,6 @@ EURO,0.010834236186348862
 ,Unnamed: 58
 ,Unnamed: 59
 ,Unnamed: 60
+,Unnamed: 61
+,Unnamed: 62
+,Unnamed: 63
